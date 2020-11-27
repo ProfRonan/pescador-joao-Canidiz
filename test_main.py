@@ -21,7 +21,7 @@ class Test(unittest.TestCase):
             assert mock_input.call_count == 1
             excesso = max(0, peso - 50)
             multa = excesso * 4
-            mock_print.called_with(
+            mock_print.assert_called_with(
                 f'O peixe pescado tem {peso}kg, a multa devida é R$ {multa:.2f}.'
             )
 
